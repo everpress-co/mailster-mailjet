@@ -532,14 +532,14 @@ class MailsterMailjet {
 			switch ( $obj->event ) {
 				case 'spam':
 				case 'unsub':
-					mailster( 'subscribers' )->unsubscribe( $subscriber->ID, $campaign_id, $status );
+					mailster( 'subscribers' )->unsubscribe( $subscriber->ID, $campaign_id, $status, $index );
 					break;
 				case 'bounce':
 					if ( ! $obj->hard_bounce ) {
 						break;
 					}
 				case 'blocked':
-					mailster( 'subscribers' )->bounce( $subscriber->ID, $campaign_id, true, $status );
+					mailster( 'subscribers' )->bounce( $subscriber->ID, $campaign_id, true, $status, $index );
 					break;
 			}
 
