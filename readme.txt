@@ -2,7 +2,7 @@
 Contributors: everpress
 Tags: mailjet, mailster, deliverymethod, newsletter, mailsteresp, email
 Requires at least: 3.8
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 1.1
 License: GPLv2 or later
 Author: EverPress
