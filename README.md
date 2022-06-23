@@ -25,7 +25,10 @@ Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?
 
 ## Screenshots
 
-1. Option Interface.
+### 1. Option Interface.
+
+![Option Interface.](https://ps.w.org/mailster-mailjet/assets/screenshot-1.png)
+
 
 ## Changelog
 
