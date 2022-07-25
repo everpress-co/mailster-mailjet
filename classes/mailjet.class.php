@@ -137,13 +137,15 @@ class MailsterMailjet {
 			foreach ( $org_attachments as $attachment ) {
 
 				$a = array(
-					'ContentType'   => $attachment[6],
+					'ContentType'   => $attachment[4],
 					'Filename'      => $attachment[1],
 					'Base64Content' => base64_encode( file_get_contents( $attachment[0] ) ),
 				);
 
 				if ( 'inline' == $attachment[6] ) {
-					$message_obj['HTMLPart']             = str_replace( '"cid:' . $attachment[7] . '"', '"cid:' . $attachment[1] . '"', $message_obj['HTMLPart'] );
+					$message_obj['HTMLPart'] = str_replace( '"cid:' . $attachment[7] . '"', '"cid:' . $attachment[1] . '"', $message_obj['HTMLPart'] );
+					$a['ContentID']          = $attachment[1];
+
 					$message_obj['InlinedAttachments'][] = $a;
 				} else {
 					$message_obj['Attachments'][] = $a;

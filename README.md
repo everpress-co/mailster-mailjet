@@ -1,6 +1,6 @@
 # Mailster Mailjet
 
-Contributors: everpress  
+Contributors: everpress, xaverb  
 Tags: mailjet, mailster, deliverymethod, newsletter, mailsteresp, email  
 Requires at least: 3.8  
 Tested up to: 6.0  
@@ -28,7 +28,6 @@ Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?
 ### 1. Option Interface.
 
 ![Option Interface.](https://ps.w.org/mailster-mailjet/assets/screenshot-1.png)
-
 
 ## Changelog
 
