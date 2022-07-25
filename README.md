@@ -1,10 +1,10 @@
 # Mailster Mailjet
 
-Contributors: everpress  
+Contributors: everpress, xaverb  
 Tags: mailjet, mailster, deliverymethod, newsletter, mailsteresp, email  
 Requires at least: 3.8  
 Tested up to: 6.0  
-Stable tag: 1.1  
+Stable tag: 1.1.1  
 License: GPLv2 or later
 
 ## Description
@@ -29,8 +29,11 @@ Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?
 
 ![Option Interface.](https://ps.w.org/mailster-mailjet/assets/screenshot-1.png)
 
-
 ## Changelog
+
+### 1.1.1
+
+-   fixed: issue with embedded images
 
 ### 1.1
 
