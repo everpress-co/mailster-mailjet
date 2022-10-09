@@ -9,11 +9,11 @@ License: GPLv2 or later
 
 ## Description
 
-> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=Mailjet+integration+for+Mailster&utm_medium=readme)
+> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=wordpress.org&utm_medium=readme&utm_term=Mailjet)
 
-Uses Mailjet to deliver emails for the [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=Mailjet+integration+for+Mailster&utm_medium=readme).
+Uses Mailjet to deliver emails for the [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=wordpress.org&utm_medium=readme&utm_term=Mailjet).
 
-Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?utm_campaign=wporg&utm_source=Mailjet+integration+for+Mailster&utm_medium=readme) to get started.
+Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?utm_campaign=wporg&utm_source=Mailjet&utm_medium=readme) to get started.
 
 ## Installation
 
@@ -45,4 +45,4 @@ Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?
 
 ## Additional Info
 
-This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=Mailjet+integration+for+Mailster&utm_medium=readme)
+This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=wordpress.org&utm_medium=readme&utm_term=Mailjet)

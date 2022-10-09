@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Mailster Mailjet
-Plugin URI: https://mailster.co/?utm_campaign=wporg&utm_source=Mailster+Mailjet+Integration&utm_medium=plugin
+Plugin URI: https://mailster.co/?utm_campaign=wporg&utm_source=wordpress.org&utm_medium=plugin&utm_term=Mailjet
 Description: Uses Mailjet to deliver emails for the Mailster Newsletter Plugin for WordPress.
 Version: 1.1.1
 Author: EverPress
