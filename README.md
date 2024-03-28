@@ -4,7 +4,7 @@ Contributors: everpress, xaverb
 Tags: mailjet, mailster, deliverymethod, newsletter, mailsteresp, email  
 Requires at least: 6.2  
 Tested up to: 6.5  
-Stable tag: 1.1.1  
+Stable tag: 1.1.2  
 License: GPLv2 or later
 
 ## Description
