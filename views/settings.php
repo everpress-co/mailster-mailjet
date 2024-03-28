@@ -3,7 +3,7 @@
 	<?php if ( ! $verified ) : ?>
 	<tr valign="top">
 		<th scope="row">&nbsp;</th>
-		<td><p class="description"><?php echo sprintf( __( 'You need a %s account to use this service!', 'mailster-mailjet' ), '<a href="https://www.mailjet.com/" class="external">Mailjet</a>' ); ?></p>
+		<td><p class="description"><?php printf( __( 'You need a %s account to use this service!', 'mailster-mailjet' ), '<a href="https://www.mailjet.com/" class="external">Mailjet</a>' ); ?></p>
 		</td>
 	</tr>
 	<?php endif; ?>

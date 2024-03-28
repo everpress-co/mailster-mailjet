@@ -53,7 +53,6 @@ class MailsterMailjet {
 				}
 			}
 		}
-
 	}
 
 
@@ -70,7 +69,6 @@ class MailsterMailjet {
 
 		// Mailjet will handle DKIM integration
 		$mailobject->dkim = false;
-
 	}
 
 
@@ -124,7 +122,9 @@ class MailsterMailjet {
 
 		if ( $mailobject->headers ) {
 			foreach ( $mailobject->headers as $key => $value ) {
-				$message_obj['Headers'][ $key ] = $value;
+				if ( ! in_array( $key, array( 'List-ID' ) ) ) {
+					$message_obj['Headers'][ $key ] = $value;
+				}
 			}
 		}
 
@@ -159,7 +159,6 @@ class MailsterMailjet {
 		);
 
 		$mailobject->mailjet_object = apply_filters( 'mailster_mailjet_object', $mailobject->mailjet_object, $mailobject );
-
 	}
 
 
@@ -194,7 +193,6 @@ class MailsterMailjet {
 		} else {
 			$mailobject->sent = true;
 		}
-
 	}
 
 
@@ -227,7 +225,6 @@ class MailsterMailjet {
 		$verified = mailster_option( 'mailjet_verified' );
 
 		include $this->plugin_path . '/views/settings.php';
-
 	}
 
 
@@ -303,7 +300,6 @@ class MailsterMailjet {
 		}
 
 		return $body;
-
 	}
 
 
@@ -325,7 +321,6 @@ class MailsterMailjet {
 		}
 
 		return $response;
-
 	}
 
 
@@ -356,6 +351,9 @@ class MailsterMailjet {
 		);
 
 		$response = $this->do_get( 'v3/REST/eventcallbackurl' );
+		if ( is_wp_error( $response ) ) {
+			return $response;
+		}
 		foreach ( $response->Data as $entry ) {
 			if ( $entry->Url == $url && $entry->Status == 'alive' ) {
 				$events = array_diff( $events, array( $entry->EventType ) );
@@ -368,14 +366,19 @@ class MailsterMailjet {
 		foreach ( $update as  $entry ) {
 			$args     = wp_parse_args( array( 'EventType' => $entry->EventType ), $args );
 			$response = $this->do_put( 'v3/REST/eventcallbackurl/' . $entry->ID, $args );
+			if ( is_wp_error( $response ) ) {
+				return $response;
+			}
 		}
 
 		// create new if needed
 		foreach ( $events as $event ) {
 			$args     = wp_parse_args( array( 'EventType' => $event ), $args );
 			$response = $this->do_post( 'v3/REST/eventcallbackurl', $args );
+			if ( is_wp_error( $response ) ) {
+				return $response;
+			}
 		}
-
 	}
 
 
@@ -395,7 +398,6 @@ class MailsterMailjet {
 		$domains = $response->Data;
 
 		return $domains;
-
 	}
 
 
@@ -415,7 +417,6 @@ class MailsterMailjet {
 		$domains = $response->Data;
 
 		return $domains;
-
 	}
 
 	/**
@@ -434,7 +435,6 @@ class MailsterMailjet {
 		$accounts = $response->results;
 
 		return $accounts;
-
 	}
 
 
@@ -548,7 +548,6 @@ class MailsterMailjet {
 			exit;
 
 		}
-
 	}
 
 
@@ -580,9 +579,9 @@ class MailsterMailjet {
 	public function notice() {
 		?>
 	<div id="message" class="error">
-	  <p>
-	   <strong>Mailjet integration for Mailster</strong> requires the <a href="https://mailster.co/?utm_campaign=wporg&utm_source=Mailjet+integration+for+Mailster&utm_medium=plugin">Mailster Newsletter Plugin</a>, at least version <strong><?php echo MAILSTER_MAILJET_REQUIRED_VERSION; ?></strong>.
-	  </p>
+		<p>
+		<strong>Mailjet integration for Mailster</strong> requires the <a href="https://mailster.co/?utm_campaign=wporg&utm_source=wordpress.org&utm_medium=plugin&utm_term=Mailjet+integration+for+Mailster">Mailster Newsletter Plugin</a>, at least version <strong><?php echo MAILSTER_MAILJET_REQUIRED_VERSION; ?></strong>.
+		</p>
 	</div>
 		<?php
 	}
@@ -632,6 +631,4 @@ class MailsterMailjet {
 			}
 		}
 	}
-
-
 }
