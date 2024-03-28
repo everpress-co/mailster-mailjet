@@ -2,8 +2,8 @@
 
 Contributors: everpress, xaverb  
 Tags: mailjet, mailster, deliverymethod, newsletter, mailsteresp, email  
-Requires at least: 3.8  
-Tested up to: 6.0  
+Requires at least: 6.2  
+Tested up to: 6.5  
 Stable tag: 1.1.1  
 License: GPLv2 or later
 
@@ -25,23 +25,27 @@ Read the [Setup Guide](https://kb.mailster.co/send-your-newsletters-via-mailjet?
 
 ## Screenshots
 
-### 1. Option Interface.
+### 1. Option Interface
 
 ![Option Interface.](https://ps.w.org/mailster-mailjet/assets/screenshot-1.png)
 
 ## Changelog
 
+### 1.1.2
+
+- fixed: List-ID header is not supported and cause a "Bad Request"
+
 ### 1.1.1
 
--   fixed: issue with embedded images
+- fixed: issue with embedded images
 
 ### 1.1
 
--   Update for Mailster 3.0
+- Update for Mailster 3.0
 
 ### 1.0
 
--   initial release
+- initial release
 
 ## Additional Info
 
