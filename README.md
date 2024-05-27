@@ -1,8 +1,8 @@
 # Mailster Mailjet
 
-Contributors: everpress, xaverb  
+Contributors: everpress, mailster, xaverb  
 Tags: mailjet, mailster, deliverymethod, newsletter, mailsteresp, email  
-Requires at least: 6.2  
+Requires at least: 6.0  
 Tested up to: 6.5  
 Stable tag: 1.1.2  
 License: GPLv2 or later
